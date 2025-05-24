@@ -64,10 +64,6 @@ bonus: $(OBJ) $(BONUS_OBJ)
 	ar rc $(NAME) $^
 	ranlib $(NAME)
 
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BONUS_OBJ)
-	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BONUS_OBJ)
-
 clean:
 	rm -f $(OBJ) $(BONUS_OBJ)
 
